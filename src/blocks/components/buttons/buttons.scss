@@ -83,6 +83,21 @@
         }
     }
 
+    &.btn-line-white {
+        border: 2px solid #fff;
+        background: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 0;
+
+        &:hover {
+            background-color: #fff;
+            color: #000 !important;
+            border-color: #fff
+        }
+    }
+
     &.btn-line-radius {
         background: transparent;
         border: 1px solid $mgray;

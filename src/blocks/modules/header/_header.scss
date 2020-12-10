@@ -23,7 +23,7 @@
                 letter-spacing: 0.05em;
                 text-transform: uppercase;
                 color: #BFBFBF;
-                padding-left: 10px;
+                padding-left: rem(50);
                 display: block;
             }
         }
@@ -61,7 +61,7 @@
                 line-height: rem(14);
                 letter-spacing: 0.05em;
                 text-transform: uppercase;
-                padding: 0 10px;
+                padding: 0 rem(25);
             }
         }
     }

@@ -1,0 +1,25 @@
+.box-tags {
+
+
+    & li {
+
+        background: #E5E5FF;
+        padding: rem(2) rem(10) rem(4) rem(10);
+        display: inline-block;
+
+        margin-right: 2px;
+        margin-bottom: 4px;
+
+        & a {
+            font-weight: 500;
+            font-size: rem(11);
+            line-height: rem(14);
+            text-transform: uppercase;
+            color: #5C5C5C;
+        }
+
+        &:hover {
+            background-color: #FFD223;
+        }
+    }
+}

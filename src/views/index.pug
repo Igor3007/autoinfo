@@ -1,10 +1,64 @@
 extends layouts/home
+include ../blocks/modules/box-tag/box-tag 
 
 block variables
+  include ../data/typeQuest
+
 
 block content
-  .container 
-    .main index
+  .main
+    section.banner-top
+      .banner-top__image: +bgimage('/img/other/home-bg.jpg')
+
+      .banner-top__content
+        .container
+          .banner-top__title: h1 Найти ответ быстро <br> и просто!
+          .banner-top__subtitle База данных по ремонту и обслуживанию автомобилей
+          .banner-top__btn
+            a(href="#"): button.btn.btn-line-white Задать вопрос
+
+    section.type-question 
+      .container
+        .type-question__list
+          each item in typeQuest
+            .type-question__item 
+              .type-question__item-title 
+                +bgimage(item.icon)
+                span= item.title
+              .type-question__item-list
+                ul
+                  each prop in item.prop
+                    li: a(href="#")= prop 
+
+    section.top-question
+      .container
+        .section-title
+          +h2('Популярное')
+          a(href="#") все материалы
+        .top-question__wrp
+          .top-question__left
+            .top-question__list
+              each item in topQuest
+                .top-question__item
+                  .top-question__item-img
+                    a(href="#"): +bgimage(item.img)
+                  .top-question__item-main
+                    .top-question__item-title
+                      a(href="#")= item.title
+                    .top-question__item-tag
+                      +boxtag(item.tag)
+          .top-question__right
+            .top-question__right-img: +bgimage('/img/home/topright.jpg')
+            .top-question__right-title Как выбрать тормозную жидкость?
+            .top-question__right-desc Тормозная система является одной из самых консервативных в конструкции автомобиля. Несмотря на обилие всевозможных электронных помощников, современный автомобиль замедляется примерно так же, как и многие десятилетия назад: благодаря тормозным колодкам, дискам и... тормозной жидкости.
+            .top-question__right-tag: +boxtag(['Тормозная система', 'Тормозная система', 'Тормозная система'])
+
+    section.brand-list
+      .container
+        .section-title
+          +h2('Список марок')
+          a(href="#") показать все марки
+
 
 
 block scripts
