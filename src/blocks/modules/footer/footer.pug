@@ -1,5 +1,36 @@
-.container
-  .footer footer
+include ../../../data/carFooter
+
+
+  .footer
+    .container-1720
+      .footer__top
+        .container
+          .footer__logo: a(href="#"): img(src="/img/svg/logo.svg")
+          .footer__nav
+            ul
+              li: a(href="#") Все материалы
+              li: a(href="#") Автомобили
+              li: a(href="#") Вопрос-ответ
+              li: a(href="#") О нас
+          .footer__quest
+            button.btn.btn-line Задать вопрос
+
+      .footer__auto
+        .container
+          .footer-auto
+            each item in carFooter
+              .footer-auto__item
+                .footer-auto__title= item.brand
+                .footer-auto__list
+                  ul
+                    each model in item.model  
+                      li: a(href="#")= model
+
+
+      .footer__dev
+        a(href="https://promicom.ru" target="_blank") 
+          span Digital-агентство
+          img(src="/img/svg/logodev.svg")
 
 
 

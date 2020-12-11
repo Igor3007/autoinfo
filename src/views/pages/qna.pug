@@ -1,0 +1,56 @@
+extends ../layouts/home
+include ../../blocks/modules/box-tag/box-tag 
+include ../../blocks/modules/qna-item/qna-item
+include ../../blocks/components/breadcrumb/breadcrumb
+include ../../blocks/components/select/select
+
+block variables
+  include ../../data/questions
+
+
+block content
+  .main
+    section.breadcrumbs
+      .container
+        +breadcrumb([ 'Главная', 'Вопрос-ответ', 'Двигатель', 'Прокладка двигателя', ])
+    section.page-title 
+      .container
+        h1 Вопрос-ответ
+    section.page-qna
+      .container
+        .page-qna__aside
+          .qna-filter
+            .qna-filter__aside
+              .qna-filter__title Фильтр
+              .qna-filter__content
+                form
+                  .form
+                    .form__item: +select(['Выберите марку'])
+                    .form__item: +select(['Выберите модель'])
+                    .form__item: +select(['Выберите поколение'])
+
+
+            .qna-filter__aside
+              .qna-filter__title Категории
+              .qna-filter__content
+                ul(data-list="collapse" id="tree")
+                  each item in catig
+                    li
+                      a(href="#")= item.title
+                      if item.parent
+                        ul
+                          each parent in item.parent 
+                            li
+                              a(href="#")= parent.title
+                              if parent.parent
+                                ul
+                                  each parent2 in parent.parent 
+                                    li: a(href="#")= parent2.title
+
+        .page-qna__main
+
+
+
+block scripts
+  script(src="js/main.js?v=1.52")
+  script(src="js/vendor.js")

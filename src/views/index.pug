@@ -1,8 +1,13 @@
 extends layouts/home
 include ../blocks/modules/box-tag/box-tag 
+include ../blocks/modules/video-item/video-item
+include ../blocks/modules/qna-item/qna-item
 
 block variables
   include ../data/typeQuest
+  include ../data/autoBrand
+  include ../data/video
+  include ../data/questions
 
 
 block content
@@ -19,7 +24,7 @@ block content
 
     section.type-question 
       .container
-        .type-question__list
+        .type-question__list 
           each item in typeQuest
             .type-question__item 
               .type-question__item-title 
@@ -58,6 +63,59 @@ block content
         .section-title
           +h2('Список марок')
           a(href="#") показать все марки
+        .brand-list__wrp
+          .popular-brands
+            ul.popular-brands__items
+              each item in brand
+                li
+                  img(src=item.icon alt='')
+                  a(href='#')
+                    span= item.name
+
+    section.top-video
+      .container
+        .section-title
+          +h2('Видео')
+          a(href="#") все видеоматериалы
+        .top-video__list
+          each item in video
+            .top-video__item
+              +video-item(item)
+
+    section.experts
+      .container-1720
+        .experts__wrp
+          .container
+            .experts__inr
+              .experts__desc
+                .experts__desc-title Автоэксперты
+                .experts__desc-sub Наши эксперты решают <span>> 500</span> проблем в день! Напишите свой вопрос специалисту онлайн и получите оперативный ответ!
+
+              .experts__list
+                each item in exp
+                  .experts__item 
+                    .item-experts
+                      .item-experts__img: a(href="#"): +bgimage(item.img)
+                      .item-experts__name: a(href="#")= item.name
+                      .item-experts__spec= item.spec
+                      .item-experts__state
+                        if item.online
+                          span.online-exp online
+                        else
+                          span.offline-exp заходил в 16:10
+                      .item-experts__quest
+                        button.btn.btn-line Задать вопрос
+
+
+    section.top-qna
+      .container
+        .section-title
+          +h2('Вопросы и ответы')
+        .top-qna__list
+          each item in questions
+            .top-qna__item
+              +qna-item(item)
+
 
 
 

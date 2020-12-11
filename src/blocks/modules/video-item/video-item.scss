@@ -1,0 +1,65 @@
+.video-item {
+    &__preview {
+        & .bgimage {
+            padding-top: 66%;
+
+            @include bgimage-cover;
+        }
+    }
+
+    &__img {
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__preview {
+        position: relative;
+
+        &:hover {
+            & .bgimage {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__play {
+        @include layer(2);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            & svg {
+                stroke: $yellow;
+            }
+        }
+
+        & svg {
+            width: rem(50);
+            height: rem(50);
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2px;
+
+            & path {
+                fill: #fff;
+            }
+
+            & circle {
+                fill: none;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: rem(18);
+        line-height: 150%;
+        color: #16162D;
+
+        padding-top: 22px;
+        padding-bottom: 20px;
+    }
+}

@@ -1,0 +1,12 @@
+include ../box-tag/box-tag
+
+mixin video-item(data)
+  .video-item
+    .video-item__preview
+      .video-item__img: +bgimage(data.img)
+      .video-item__play
+        a(href=""): +icons('#ic_play')
+    .video-item__title
+      a(href="#")= data.title
+    .video-item__tags
+      +boxtag(data.tag)

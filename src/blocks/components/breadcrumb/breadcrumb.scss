@@ -1,6 +1,6 @@
 .breadcrumb {
 
-    padding-top: rem(25);
+    padding-top: rem(20);
 
     & ul {
         display: flex;
@@ -14,8 +14,8 @@
 
         & a {
             color: $gray;
-            font-size: 13px;
-            color: #fff;
+            font-size: 14px;
+            color: #c4c4c4;
             text-decoration: underline;
 
             &:hover {
@@ -24,8 +24,15 @@
         }
 
         &::after {
-            content: '—';
-            padding: 0 rem(10);
+            content: '';
+            margin: 0 rem(10);
+            width: 5px;
+            height: 5px;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: #c4c4c4;
+            position: relative;
+            top: -2px;
         }
 
         &:last-child::after {

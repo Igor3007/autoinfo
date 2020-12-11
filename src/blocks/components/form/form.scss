@@ -414,3 +414,51 @@
         }
     }
 }
+
+/* iconcross */
+
+
+.icon-cross {
+    width: 14px;
+    min-width: 14px;
+    height: 14px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+
+    &::before,
+    &::after {
+        display: inline-block;
+        background: #6a6a6a;
+        position: absolute;
+        content: '';
+    }
+
+    &::before {
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        margin-top: -1px;
+    }
+
+    &::after {
+        top: 0;
+        left: 50%;
+        margin-left: -1px;
+        width: 2px;
+        height: 100%;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+    }
+
+    &.open {
+        &::after {
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 0px;
+        }
+    }
+
+
+}
