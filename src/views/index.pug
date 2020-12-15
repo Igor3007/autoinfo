@@ -112,9 +112,10 @@ block content
         .section-title
           +h2('Вопросы и ответы')
         .top-qna__list
-          each item in questions
-            .top-qna__item
-              +qna-item(item)
+          each item, index in questions
+            if index <=5
+              .top-qna__item
+                +qna-item(item)
 
 
 

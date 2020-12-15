@@ -1,6 +1,7 @@
 .breadcrumb {
 
-    padding-top: rem(20);
+    padding-top: rem(30);
+    background-color: #fafafa;
 
     & ul {
         display: flex;
@@ -16,7 +17,6 @@
             color: $gray;
             font-size: 14px;
             color: #c4c4c4;
-            text-decoration: underline;
 
             &:hover {
                 text-decoration: underline;

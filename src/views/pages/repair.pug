@@ -1,9 +1,8 @@
 extends ../layouts/home
-include ../../blocks/modules/box-tag/box-tag 
-include ../../blocks/modules/qna-item/qna-item
 include ../../blocks/components/breadcrumb/breadcrumb
 include ../../blocks/components/select/select
 include ../../blocks/components/pagination/pagination
+include ../../blocks/components/form/form
 
 block variables
   include ../../data/questions
@@ -16,13 +15,15 @@ block content
         +breadcrumb([ 'Главная', 'Вопрос-ответ', 'Двигатель', 'Прокладка двигателя', ])
     section.page-title 
       .container
-        h1 Вопрос-ответ
+        h1 Ремонт двигателя
     section.page-qna-section
       .container
         .page-qna
           .page-qna__aside
             .add-answer
-              a(href="#"): button.btn.btn-full + Задать вопрос
+              a(href="#"): button.btn.btn-line.btn-full 
+                +icons('#ic_oil', 27)
+                span подбор масла
             .qna-filter
               .qna-filter__aside
                 .qna-filter__title Фильтр
@@ -51,37 +52,27 @@ block content
                                     each parent2 in parent.parent 
                                       li: a(href="#")= parent2.title
 
-          .page-qna__main.page-qna__main--offset
+          .page-qna__main
 
-            .filter-questions
-              ul(data-ul-select="")
-                li.active: a(href="#") Все вопросы
-                li: a(href="#") Без ответа
-                li: a(href="#") популярные
-                li: a(href="#") Обсуждаемые
+            .filter-repair
+              ul 
+                li.active: +checkbox('Статьи')
+                li: +checkbox('Видео')
+                li: +checkbox('Вопрос-ответ')
+              .filter-repair__sort
+                span Сортировать
+                +select(['по дате', 'популярные'])
+
+            .repair
+              .repair__list
+                .repair__item
+                  .repair-artice-item
 
 
 
-            each item in questions
 
-              .qiestion
-                .qiestion__head
-                  .qiestion__auto
-                    +bgimage(item.auto.img)
-                    a(href="#")= item.auto.name
-                  .qiestion__count
-                    span.count 5
-                    span Ответов
-                  .qiestion__share
-                    +icons('#ic_share', 15)
-                .qiestion__title
-                  a(href="#")= item.title
-                .qiestion__footer
-                  .qiestion__tags
-                    +boxtag(item.tags)
-                  .qiestion__prop
-                    .qiestion__autor  Сергей Н. 
-                    .qiestion__date 5 часов назад
+            //- content
+
           .page-qna__pagination
             +pagination()
 

@@ -76,8 +76,8 @@ ul[data-ul-select] {
     @media screen and (max-width: $w940) {
         display: flex;
         flex-direction: column;
-
-        display: none;
+        padding-left: rem(20);
+        background-color: #f4f4f4;
     }
 
     &.open {
@@ -103,10 +103,13 @@ ul[data-ul-select] {
     & li {
         @media screen and (max-width: $w940) {
             display: none;
+            width: 100%;
+
 
             &.active {
                 display: block;
                 position: relative;
+
 
                 &::after {
                     content: '';
