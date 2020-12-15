@@ -1,23 +1,19 @@
 .btn {
 
-    color: #fff;
+    color: #000;
     border: none;
     padding: 1em 3em;
-    color: #fff;
-    background: $blue;
+    color: #000;
+    background: #FFD223;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: none;
     text-transform: uppercase;
-    border-radius: 3px;
-
     font-style: normal;
     font-weight: bold;
     font-size: rem(13);
-
-    @include w1280-block() {}
 
     &:hover {
         opacity: 0.9;

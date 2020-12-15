@@ -16,7 +16,7 @@
         t.$topLevelBranches = t.$element.children("li");
         t.$allBranches = t.$element.find("li");
         t.$element.addClass("abix-tree-list");
-        t.$allBranches.not(t.$topLevelBranches).hide();
+        t.$allBranches.not(t.$topLevelBranches).parent('ul').hide();
         t.$allBranches.each(function () {
             var n = e(this).children("ul,ol");
             if (n.length > 0) {
@@ -47,7 +47,7 @@
     };
     o.prototype.expand = function (e) {
         var t = this;
-        e.children("ul,ol").children("li").show(300, function () {
+        e.children("ul,ol").slideDown(300, function () {
             e.removeClass("collapsed").addClass("expanded");
         })
 
@@ -55,21 +55,21 @@
     };
     o.prototype.collapse = function (e) {
         var t = this;
-        e.children("ul,ol").children("li").hide(300, function () {
+        e.children("ul,ol").slideUp(300, function () {
             e.removeClass("expanded").addClass("collapsed");
         })
         e.children("span.icon").removeClass(t.options.expandedIconClass).addClass(t.options.collapsedIconClass)
     };
     o.prototype.collapseAll = function () {
         var e = this;
-        e.$allBranches.not(e.$topLevelBranches).hide(1e3, function () {
+        e.$allBranches.not(e.$topLevelBranches).slideUp(300, function () {
             e.$allBranches.removeClass("expanded").addClass("collapsed");
             e.$allBranches.children("span.icon").removeClass(e.options.expandedIconClass).addClass(e.options.collapsedIconClass)
         })
     };
     o.prototype.expandAll = function () {
         var e = this;
-        e.$allBranches.show(1e3, function () {
+        e.$allBranches.slideDown(1e3, function () {
             e.$allBranches.removeClass("collapsed").addClass("expanded");
             e.$allBranches.children("span.icon").removeClass(e.options.collapsedIconClass).addClass(e.options.expandedIconClass)
         })

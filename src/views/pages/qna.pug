@@ -16,38 +16,65 @@ block content
     section.page-title 
       .container
         h1 Вопрос-ответ
-    section.page-qna
+    section.page-qna-section
       .container
-        .page-qna__aside
-          .qna-filter
-            .qna-filter__aside
-              .qna-filter__title Фильтр
-              .qna-filter__content
-                form
-                  .form
-                    .form__item: +select(['Выберите марку'])
-                    .form__item: +select(['Выберите модель'])
-                    .form__item: +select(['Выберите поколение'])
+        .page-qna
+          .page-qna__aside
+            .add-answer
+              a(href="#"): button.btn.btn-full + Задать вопрос
+            .qna-filter
+              .qna-filter__aside
+                .qna-filter__title Фильтр
+                .qna-filter__content
+                  form
+                    .form
+                      .form__item: +select(['Выберите марку'])
+                      .form__item: +select(['Выберите модель'])
+                      .form__item: +select(['Выберите поколение'])
 
 
-            .qna-filter__aside
-              .qna-filter__title Категории
-              .qna-filter__content
-                ul(data-list="collapse" id="tree")
-                  each item in catig
-                    li
-                      a(href="#")= item.title
-                      if item.parent
-                        ul
-                          each parent in item.parent 
-                            li
-                              a(href="#")= parent.title
-                              if parent.parent
-                                ul
-                                  each parent2 in parent.parent 
-                                    li: a(href="#")= parent2.title
+              .qna-filter__aside
+                .qna-filter__title Категории
+                .qna-filter__content
+                  ul(data-list="collapse" id="tree")
+                    each item in catig
+                      li
+                        a(href="#")= item.title
+                        if item.parent
+                          ul
+                            each parent in item.parent 
+                              li
+                                a(href="#")= parent.title
+                                if parent.parent
+                                  ul
+                                    each parent2 in parent.parent 
+                                      li: a(href="#")= parent2.title
 
-        .page-qna__main
+          .page-qna__main
+
+            each item in [1,2,3,4,5,6,7,8,9]
+
+              .qiestion
+                .qiestion__head
+                  .qiestion__auto
+                    +bgimage('/img/autoBrand/mazda.png')
+                    a(href="#") Mazda 6
+                  .qiestion__count
+                    span.count 5
+                    span Ответов
+                  .qiestion__share
+                    +icons('#ic_share', 15)
+                .qiestion__title
+                  a(href="#") Какое масло выбрать для Mazda 6?
+                .qiestion__footer
+                  .qiestion__tags
+                    +boxtag(['Двигатель', 'Масло'])
+                  .qiestion__prop
+                    .qiestion__autor  Сергей Н. 
+                    .qiestion__date 5 часов назад
+
+
+
 
 
 
