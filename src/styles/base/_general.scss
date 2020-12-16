@@ -357,6 +357,12 @@ header {
         line-height: 150%;
         color: #16162D;
         padding: rem(25) 0;
+
+        @media screen and (max-width: 580px) {
+
+            font-size: rem(18);
+            padding: rem(20) 0;
+        }
     }
 
     &__right-desc {
