@@ -54,12 +54,22 @@
     }
 
     &__title {
-        font-weight: 500;
-        font-size: rem(18);
-        line-height: 150%;
-        color: #16162D;
 
         padding-top: 22px;
         padding-bottom: 20px;
+
+        & a {
+            font-weight: 500;
+            font-size: rem(18);
+            line-height: 150%;
+            color: #16162D;
+
+
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
     }
 }

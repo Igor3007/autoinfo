@@ -1,3 +1,5 @@
+include ../../components/mobile-menu/mobile-menu
+
 .container-1720
   .header
     .header__top
@@ -5,13 +7,18 @@
       .header__top-nav
         nav
           ul
-            li: a(href="#") Все материалы
-            li: a(href="#") Автомобили 
-            li: a(href="#") Вопрос-ответ
+            li: a(href="/repair.html") Все материалы
+            li: a(href="/brands.html") Автомобили 
+            li: a(href="/qna.html") Вопрос-ответ
             li: a(href="#") О нас
             li: a(href="#") Личный кабинет
             li: a(href="#") Выбрать авто
     .header__main
+      .header__mobile
+        .nav__hamburger
+          i
+          i
+          i
       .header__logo
         a(href="/"): img(src="/img/svg/logo.svg")
       .header__nav
@@ -26,6 +33,8 @@
       .header__find: +icons('#ic_find', 18)
       .header__quest
         button.btn.btn-line Задать вопрос
+
+  +mobile-menu()
 
 
 

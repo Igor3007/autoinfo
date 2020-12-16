@@ -118,7 +118,7 @@
         }
 
         @media screen and (max-width: $w480) {
-            margin-right: 0;
+            margin-right: 0 !important;
         }
     }
 

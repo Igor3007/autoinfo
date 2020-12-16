@@ -1,0 +1,100 @@
+extends ../layouts/home
+include ../../blocks/components/breadcrumb/breadcrumb
+include ../../blocks/components/select/select
+include ../../blocks/modules/brand-list/brand-list
+include ../../blocks/modules/table/table
+
+include ../../blocks/modules/video-item/video-item
+include ../../blocks/modules/qna-item/qna-item
+
+block variables
+  include ../../data/autoBrand
+  include ../../data/video
+  include ../../data/questions
+
+
+
+block content
+  .main
+    section.breadcrumbs
+      .container
+        +breadcrumb([ 'Главная', 'Подбор масла', 'Audi 100 4l 2005-2009' ])
+    section.page-title 
+      .container
+        h1 Подбор масла
+    section.select-oil-section
+      .container
+        .select-oil
+          .select-oil__desc Уникальный сервис по подбору моторных масел с конкретными параметрами для автомобилей большинства популярных марок, эксплуатируемых автовладельцами на территории России. 
+          .select-oil__filter
+            form(action="/")
+              .form
+                .form__item
+                  .form__subitem: +select(['Audi', 'BMW', 'VW'])
+                  .form__subitem: +select(['Выберите модель', 'A6', 'A4', 'D3'])
+                  .form__subitem: button.btn.btn-line.btn-full Подобрать
+
+    section.article-content
+      .container
+        article
+          .article-content__header
+            h2 Масло для Audi 100 4l 2005-2009
+          .article-content__text
+            p В таблице указаны подходящие масла для заливки в двигатель Q7 4l, выпускавшийся с 2005 по 2009 год.
+          .article-content__table
+            h4 Модификация двигателя 2.0 литра 16v F4R - 143 л.с. / 195 Нм
+            +table
+          .article-content__col2
+            div
+              p Для покупки подходящего масла потребуется назвать — индекс вязкости SAE и допустимый — API качества масла для дизельного или бензинового двигателя. (Выбор производителя на свое усмотрение).
+              p С годами двигатель Q7 стареет (устает), поэтому параметры таблицы актуальны для замены масла в 2020 году и со временем могут изменяться с учетом возраста автомобиля.
+              p Если автомобиль эксплуатируется круглый год в регионе с преобладанием холодного сезона, то подходящий класс вязкости масла необходимо брать из колонок зима или всесезон.
+
+              p.anotation 
+                |НАПРИМЕР: <br> Для бензинового двигателя 
+                strong Audi Q7 (4l) 2005 г.в. 
+                | при эксплуатации 
+                strong в 2020 году, 
+                | подойдет всесезонное полусинтетическое масло 
+                strong 10W-40 с качеством SH, 
+                | а для моделей 
+                strong 2009 г.в. 
+                | на холодный период года хорошо подойдет — полусинтетика 
+                strong 0W-40 \ SL.
+
+              p Если автомобиль эксплуатируется круглый год в регионе с преобладанием теплого сезона, то подходящий класс вязкости масла необходимо брать из колонки всесезон. Если автомобиль эксплуатируется редко в течении года и преимущественно в теплое время года, то подходящий класс вязкости масла необходимо брать из колонки лето.
+              p По возможности, сверьте выбранное масло на соответствие требованиям спецификаций производителя автомобиля и интервалы техобслуживания.
+            div
+              img(src="/img/other/oil.jpg")
+          .article-content__header
+            h2 Состояние масла по капле
+          .article-content__text
+            p Одну каплю с масляного щупа двигателя, необходимо капнуть на лист бумаги и подождать 15 минут, пока она пропитается и сформирует четкое пятно. Теперь сравниваем полученный образец с таблицей.
+            img(src="/img/other/test-oil.jpg")
+
+    section.top-video
+      .container
+        .section-title
+          +h2('Видео')
+          a(href="#") все видеоматериалы
+        .top-video__list
+          each item in video
+            .top-video__item
+              +video-item(item)
+
+    section.top-qna
+      .container
+        .section-title
+          +h2('Вопросы и ответы')
+        .top-qna__list
+          each item, index in questions
+            if index <=5
+              .top-qna__item
+                +qna-item(item)
+
+
+
+
+block scripts
+  script(src="js/main.js?v=1.52")
+  script(src="js/vendor.js")

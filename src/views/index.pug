@@ -1,7 +1,8 @@
-extends layouts/home
+extends layouts/index
 include ../blocks/modules/box-tag/box-tag 
 include ../blocks/modules/video-item/video-item
 include ../blocks/modules/qna-item/qna-item
+include ../blocks/modules/brand-list/brand-list
 
 block variables
   include ../data/typeQuest
@@ -58,19 +59,11 @@ block content
             .top-question__right-desc Тормозная система является одной из самых консервативных в конструкции автомобиля. Несмотря на обилие всевозможных электронных помощников, современный автомобиль замедляется примерно так же, как и многие десятилетия назад: благодаря тормозным колодкам, дискам и... тормозной жидкости.
             .top-question__right-tag: +boxtag(['Тормозная система', 'Тормозная система', 'Тормозная система'])
 
-    section.brand-list
-      .container
-        .section-title
-          +h2('Список марок')
-          a(href="#") показать все марки
-        .brand-list__wrp
-          .popular-brands
-            ul.popular-brands__items
-              each item in brand
-                li
-                  img(src=item.icon alt='')
-                  a(href='#')
-                    span= item.name
+    +brand-list({
+      data: brand,
+      viewAll: true,
+      count: false
+    })
 
     section.top-video
       .container

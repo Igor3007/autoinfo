@@ -3,9 +3,11 @@ include ../../blocks/components/breadcrumb/breadcrumb
 include ../../blocks/components/select/select
 include ../../blocks/components/pagination/pagination
 include ../../blocks/components/form/form
+include ../../blocks/modules/repair-item/repair-item
 
 block variables
   include ../../data/questions
+  include ../../data/repair
 
 
 block content
@@ -21,7 +23,7 @@ block content
         .page-qna
           .page-qna__aside
             .add-answer
-              a(href="#"): button.btn.btn-line.btn-full 
+              a(href="/select-oil.html"): button.btn.btn-line.btn-full 
                 +icons('#ic_oil', 27)
                 span подбор масла
             .qna-filter
@@ -65,8 +67,14 @@ block content
 
             .repair
               .repair__list
-                .repair__item
-                  .repair-artice-item
+                each item in repair
+                  .repair__item
+                    if item.type == 'qna'
+                      +card-qna(item)
+                    if item.type == 'Видео'
+                      +card-video(item)
+                    if item.type == 'Статья'
+                      +card-article(item)
 
 
 

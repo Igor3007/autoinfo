@@ -1,0 +1,32 @@
+extends ../layouts/home
+include ../../blocks/components/breadcrumb/breadcrumb
+include ../../blocks/modules/brand-list/brand-list
+
+block variables
+  include ../../data/autoBrand
+
+
+
+block content
+  .main
+    section.breadcrumbs
+      .container
+        +breadcrumb([ 'Главная', 'Марки авто' ])
+    section.page-title 
+      .container
+        h1 Марки авто
+    +brand-list({
+      data: brand,
+      viewAll: false,
+      count: true,
+      modify: 'brand-list--page'
+    })
+
+
+
+
+
+
+block scripts
+  script(src="js/main.js?v=1.52")
+  script(src="js/vendor.js")

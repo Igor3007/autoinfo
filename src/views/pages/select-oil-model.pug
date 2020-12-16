@@ -1,0 +1,47 @@
+extends ../layouts/home
+include ../../blocks/components/breadcrumb/breadcrumb
+include ../../blocks/components/select/select
+include ../../blocks/modules/brand-list/brand-list
+
+block variables
+  include ../../data/autoBrand
+
+
+
+block content
+  .main
+    section.breadcrumbs
+      .container
+        +breadcrumb([ 'Главная', 'Подбор масла' ])
+    section.page-title 
+      .container
+        h1 Audi
+    section.select-oil-section
+      .container
+        .select-oil
+          .select-oil__desc Уникальный сервис по подбору моторных масел с конкретными параметрами для автомобилей большинства популярных марок, эксплуатируемых автовладельцами на территории России. 
+          .select-oil__filter
+            form(action="/")
+              .form
+                .form__item
+                  .form__subitem: +select(['Audi', 'BMW', 'VW'])
+                  .form__subitem: +select(['Выберите модель', 'A6', 'A4', 'D3'])
+                  .form__subitem: button.btn.btn-line.btn-full Подобрать
+
+    +model-list({
+      data: model,
+      viewAll: false,
+      count: false,
+      title: 'Audi',
+      modify: 'brand-list--model'
+    })
+
+
+
+
+
+
+
+block scripts
+  script(src="js/main.js?v=1.52")
+  script(src="js/vendor.js")
