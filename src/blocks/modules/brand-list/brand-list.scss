@@ -1,6 +1,7 @@
 .brand-list {
     background: $lightGray;
-    @include padd-x(55);
+    @include padd-top(55);
+    @include padd-bottom(45);
 }
 
 .brand-list--page {
@@ -48,11 +49,15 @@
             -webkit-box-align: center;
             -ms-flex-align: center;
             align-items: center;
-            height: rem(60);
+            height: rem(58);
 
             & span {
                 color: $gray;
                 cursor: pointer;
+                text-transform: uppercase;
+                font-size: rem(13);
+                font-weight: 500;
+                letter-spacing: 0.05em;
 
                 &:hover {
                     text-decoration: underline;
@@ -69,7 +74,7 @@
 
         & img {
             max-width: rem(45);
-            margin-right: rem(5);
+            margin-right: rem(15);
             width: 100%;
             max-height: rem(35);
             object-fit: contain;

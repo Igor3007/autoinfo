@@ -1,7 +1,16 @@
 .header {
 
+    position: relative;
+    z-index: 2;
+
     &__logo {
         & img {
+
+            @media screen and (min-width: $w940) {
+                position: relative;
+                top: rem(-7);
+            }
+
             @media screen and (max-width: $w1376) {
                 max-width: rem(140);
             }
@@ -13,6 +22,9 @@
     }
 
     &__mobile {
+
+        margin-right: 6px;
+
         @media screen and (min-width: $w940) {
             display: none;
         }
@@ -23,9 +35,9 @@
         color: #fff;
         display: flex;
         justify-content: space-between;
-        height: 40px;
+        height: rem(40);
         align-items: center;
-        padding: 0 38px;
+        padding: 0 rem(38);
 
         @media screen and (max-width: $w1100) {
             padding: rem(0) rem(25);
@@ -45,12 +57,12 @@
 
             & a {
                 font-weight: 500;
-                font-size: rem(12);
+                font-size: 11px;
                 line-height: rem(14);
-                letter-spacing: 0.05em;
+                letter-spacing: 0.07em;
                 text-transform: uppercase;
                 color: #BFBFBF;
-                padding-left: rem(50);
+                padding-left: rem(60);
                 display: block;
 
                 @media screen and (max-width: $w1376) {
@@ -60,11 +72,20 @@
         }
     }
 
+    &__top-nav {
+        margin-left: auto;
+    }
+
     &__top-info {
         font-weight: 500;
-        font-size: rem(12);
+        font-size: 12px;
         line-height: rem(14);
         letter-spacing: 0.05em;
+
+
+        @media screen and (max-width: $w1100) {
+            display: none;
+        }
 
     }
 
@@ -73,7 +94,8 @@
         align-items: center;
         color: #000000;
         background: #FFD223;
-        padding: rem(25) rem(38);
+        padding: rem(30) rem(38);
+        position: relative;
 
         @media screen and (max-width: $w1100) {
             padding: rem(18) rem(25);
@@ -90,8 +112,11 @@
                 display: flex;
                 align-items: center;
                 list-style-type: none;
-                justify-content: flex-end;
-                padding-right: 25px;
+                justify-content: space-between;
+                padding-right: 0;
+                max-width: rem(860);
+                margin-left: auto;
+                margin-right: 7%;
             }
 
             & a {
@@ -121,7 +146,7 @@
     &__find {
         flex-grow: 1;
         text-align: center;
-        max-width: rem(100);
+        max-width: rem(110);
         display: flex;
         justify-content: center;
 
@@ -136,6 +161,47 @@
 
         @media screen and (max-width: $w480) {
             margin-right: rem(0);
+        }
+
+
+        & .find-wrp {
+            position: absolute;
+            background: #fff;
+            left: rem(25);
+            right: rem(25);
+            top: rem(25);
+            bottom: rem(25);
+            align-items: center;
+            border-radius: rem(2);
+            display: none;
+
+            & input {
+                width: 100%;
+                height: 100%;
+                display: block;
+                flex-grow: 1;
+                border: none;
+                border-radius: none;
+                background-color: none;
+                padding-left: rem(20);
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+            }
+
+            &.open {
+                display: flex;
+            }
+
+            @media screen and (max-width: $w1100) {
+                left: rem(15);
+                right: rem(15);
+                top: rem(15);
+                bottom: rem(15);
+            }
+
         }
     }
 

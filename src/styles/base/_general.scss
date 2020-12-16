@@ -124,7 +124,7 @@ header {
 
 
     @media screen and (min-width: 1720px) {
-        margin-top: -135px;
+        margin-top: -145px;
     }
 
     position: relative;
@@ -149,7 +149,7 @@ header {
     &__title {
 
         @media screen and (min-width: 1720px) {
-            @include padd-top(120);
+            @include padd-top(90);
         }
 
         & h1 {
@@ -177,7 +177,7 @@ header {
         color: #FFFFFF;
 
         padding-top: rem(25);
-        padding-bottom: rem(55);
+        padding-bottom: rem(50);
 
         @media screen and (max-width: $w1280) {
             padding-top: rem(20);
@@ -197,7 +197,7 @@ header {
 
     background: $lightGray;
 
-    @include padd-top(70);
+    @include padd-top(58);
     @include padd-bottom(20);
 
     &__list {
@@ -206,7 +206,7 @@ header {
 
     &__item {
         @include col();
-        @include size-w1100(4);
+        @include size-w940(4);
         @include size-w760(6);
         @include size-w480(6);
         @include size(12);
@@ -214,7 +214,7 @@ header {
 
     &__item {
 
-        @include padd-bottom(50);
+        @include padd-bottom(60);
 
         & .bgimage {
             width: rem(33);
@@ -232,7 +232,7 @@ header {
         font-size: rem(28);
         line-height: rem(42);
         color: #16162D;
-        padding-bottom: rem(15);
+        padding-bottom: rem(20);
         display: flex;
         align-items: center;
 
@@ -290,13 +290,14 @@ header {
     &__desc-sub {
         font-size: rem(14);
         line-height: 190% !important;
+        @include padd-bottom(48);
     }
 }
 
 .section-title {
     display: flex;
     align-items: center;
-    padding-bottom: rem(45);
+    @include padd-bottom(50);
 
     & a {
         font-weight: 500;
@@ -309,14 +310,15 @@ header {
         display: block;
         padding-top: rem(5);
 
-        margin-left: rem(20);
+        margin-left: rem(35);
     }
 }
 
 
 
 .top-question {
-    @include padd-x(50);
+    @include padd-top(55);
+    @include padd-bottom(70);
 
     &__wrp {
         @include row-flex();
@@ -353,7 +355,7 @@ header {
 
     &__right-title {
         font-weight: 500;
-        font-size: rem(15);
+        font-size: rem(18);
         line-height: 150%;
         color: #16162D;
         padding: rem(25) 0;
@@ -377,7 +379,7 @@ header {
 
     &__item {
         display: flex;
-        margin-bottom: rem(30);
+        margin-bottom: rem(40);
 
         &>div {
             flex-grow: 1;
@@ -431,7 +433,8 @@ header {
 
 
 .top-video {
-    @include padd-x(50);
+    @include padd-top(50);
+    @include padd-bottom(35);
 
     &__list {
         @include row-flex();
@@ -452,14 +455,14 @@ header {
 
 .top-qna {
 
-    @include padd-x(50);
+    @include padd-x(60);
 
     &__list {
         @include row-flex();
 
         margin-bottom: rem(30);
-        margin-left: -25px;
-        margin-right: -25px;
+        margin-left: rem(-15);
+        margin-right: rem(-15);
     }
 
     &__item {
@@ -468,7 +471,11 @@ header {
         @include size-w480(6);
         @include size(12);
 
+        padding-bottom: rem(27);
 
+        @media screen and (max-width: $w480) {
+            padding-bottom: rem(15);
+        }
     }
 }
 
@@ -487,14 +494,15 @@ header {
     }
 
     &__list {
-        @include col();
         @include size-w1100(9);
         @include row-flex();
+        margin-left: rem(20);
 
         @media screen and (max-width: $w760) {
             flex-wrap: nowrap;
             overflow-y: auto;
             max-width: calc(100% + rem(30));
+            margin-left: rem(0);
         }
 
     }
@@ -527,14 +535,20 @@ section.breadcrumbs {
 }
 
 .page-title {
-    padding-top: rem(25);
     background-color: $lightGray;
-    padding-bottom: rem(40);
+
+    @include padd-top(50);
+    @include padd-bottom(54);
+
+    @media screen and (max-width: $w940) {
+        padding-bottom: rem(25);
+        padding-top: rem(25);
+    }
 }
 
 .item-experts {
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -545,11 +559,27 @@ section.breadcrumbs {
         margin: 0 auto;
         width: 100%;
 
+        & .is-online {
+            & .bgimage::before {
+                content: '';
+                width: 13px;
+                height: 13px;
+                display: block;
+                background-color: #49a41f;
+                border-radius: 50%;
+                margin-left: auto;
+                position: absolute;
+                right: 20%;
+                bottom: 2%;
+            }
+        }
+
         & .bgimage {
             padding-top: 100%;
             transform: none !important;
-
+            border-radius: 50%;
             @include bgimage-cover;
+
         }
     }
 
@@ -563,7 +593,7 @@ section.breadcrumbs {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: rem(10);
+        padding-top: rem(0);
 
         .item-experts__name {
             font-weight: 500;
@@ -581,6 +611,7 @@ section.breadcrumbs {
         line-height: 145%;
         text-align: center;
         color: #939393;
+        padding-bottom: rem(10);
 
     }
 
@@ -593,6 +624,7 @@ section.breadcrumbs {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-bottom: rem(30);
 
         & .online-exp {
             color: #49A41F;
@@ -635,7 +667,7 @@ section.breadcrumbs {
         font-size: rem(28);
         line-height: rem(59);
         color: #16162D;
-        padding-bottom: rem(30);
+        @include padd-bottom(65);
 
         @media screen and (max-width: $w1100) {
             padding-bottom: rem(10);
@@ -649,7 +681,7 @@ section.breadcrumbs {
 
         & span {
             font-weight: 500;
-            font-size: rem(28);
+            font-size: rem(24);
             color: #16162D;
         }
 
@@ -665,30 +697,69 @@ section.breadcrumbs {
 
     &__aside {
         @include col();
-        @include size-w1100(3);
-        @include size-w760(4);
-        @include size-w480(6);
+        @include size-w940(3);
+
+        @include w360-block {
+            max-width: rem(360);
+        }
+
         @include size(12);
     }
 
     &__main {
         @include col();
-        @include size-w1100(9);
-        @include size-w760(8);
-        @include size-w480(6);
+        @include size-w940(9);
         @include size(12);
 
-        @media screen and (min-width: $w760) {
+
+        @media screen and (min-width: $w1440) {
             padding-left: rem(15);
 
             &--offset {
-                margin-top: rem(-80);
+                margin-top: rem(-88);
             }
         }
 
+        @media screen and (min-width: $w1280) {
+            padding-left: rem(15);
 
+            &--offset {
+                margin-top: rem(-75);
+            }
+        }
 
+        @media screen and (min-width: $w940) {
+            padding-left: rem(15);
 
+            &--offset {
+                margin-top: rem(-75);
+            }
+        }
+    }
+
+    &__aside {
+        @media screen and (max-width: $w940) {
+            position: fixed;
+            background: #fff;
+            z-index: 5;
+            left: 0;
+            top: 0;
+            margin: 0;
+            padding: 0 rem(25) rem(25) rem(25);
+            transition: 0.3s ease;
+            transform: translateX(-100%);
+            overflow-y: auto;
+            bottom: 0;
+
+            &.open {
+                box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.541);
+                transform: translateX(0%);
+
+                & .qna-filter {
+                    margin-bottom: rem(25);
+                }
+            }
+        }
     }
 
 
@@ -702,6 +773,11 @@ section.breadcrumbs {
 }
 
 .qna-filter {
+
+    &__send {
+        padding-top: rem(25);
+    }
+
     &__aside {
         background-color: #f4f4f4;
         margin-top: rem(30);
@@ -726,10 +802,10 @@ section.breadcrumbs {
     }
 
     &__content {
-        padding: 15px 22px;
+        padding: rem(10) rem(22) rem(15) rem(22);
 
         & .abix-tree-list {
-            font-size: 14px;
+            font-size: rem(14);
             font-weight: normal;
 
             & .expanded {
@@ -739,11 +815,11 @@ section.breadcrumbs {
             }
 
             & li {
-                padding-top: 18px;
+                padding-top: rem(18);
             }
 
             & li>ul {
-                padding-left: 25px;
+                padding-left: rem(25);
             }
         }
 
@@ -763,7 +839,7 @@ section.breadcrumbs {
 }
 
 .add-answer {
-    padding-top: 25px;
+    padding-top: rem(25);
 
     & .btn-line {
 
@@ -785,18 +861,21 @@ section.breadcrumbs {
 
 }
 
-.qiestion {
+.question {
 
-    padding-bottom: rem(25);
+    background-color: $lightGray;
+
+    margin-bottom: rem(25);
 
     &__head {
         display: flex;
         justify-content: space-between;
+        padding: rem(15) rem(20) 0 rem(20);
     }
 
     &__title {
         min-height: rem(62);
-        padding: rem(10) 0;
+        padding: rem(10) rem(20);
 
         font-weight: 500;
         font-size: rem(18);
@@ -836,6 +915,13 @@ section.breadcrumbs {
         margin-left: rem(5);
     }
 
+    &__date,
+    &__autor {
+        @media screen and (max-width: $w480) {
+            font-size: 12px;
+        }
+    }
+
 
     &__auto {
         flex-grow: 1;
@@ -867,9 +953,14 @@ section.breadcrumbs {
 
         background-color: #f4f4f4;
 
-        padding: rem(13) rem(22) rem(13) rem(22);
+        padding: rem(13) rem(20) rem(13) rem(20);
         border-top: 1px solid #E1E1E1;
-        ;
+
+
+        @media screen and (max-width: $w480) {
+            flex-direction: column;
+        }
+
     }
 
     &__prop {
@@ -881,6 +972,10 @@ section.breadcrumbs {
         line-height: rem(15);
         text-align: right;
         color: #16162D;
+
+        @media screen and (max-width: $w480) {
+            margin-top: rem(15);
+        }
     }
 
     &__share {
@@ -892,7 +987,13 @@ section.breadcrumbs {
 
 .filter-questions {
 
-    margin-bottom: rem(59);
+    margin-bottom: rem(72);
+
+    @media screen and (max-width: $w940) {
+        margin-top: rem(25);
+
+        margin-bottom: rem(25);
+    }
 
     & ul {
 
@@ -913,7 +1014,7 @@ section.breadcrumbs {
                 font-size: rem(14);
                 line-height: rem(41);
                 text-transform: uppercase;
-                margin: 0 rem(17);
+                margin: 0 rem(40);
 
                 &:first-child {
                     margin-left: 0;
@@ -935,6 +1036,35 @@ section.breadcrumbs {
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (max-width: $w580) {
+        flex-direction: column;
+
+        &__sort {
+            border: 1px solid #ccc;
+            padding: 5px 0 5px 15px !important;
+            width: 100%;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & span {
+                font-weight: bold;
+            }
+
+            & .select {
+                flex-grow: 1;
+
+                & select {
+                    padding-left: 10px;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+
+
     & ul {
 
         list-style-type: none;
@@ -942,14 +1072,21 @@ section.breadcrumbs {
         align-items: center;
         min-height: rem(45);
 
+        @media screen and (max-width: $w480) {
+            overflow-y: auto;
+            width: 100%;
+        }
+
         & li {
-
-
             font-weight: 500;
             font-size: rem(14);
             line-height: rem(41);
             text-transform: uppercase;
             margin: 0 rem(17);
+
+            @media screen and (max-width: $w480) {
+                white-space: nowrap;
+            }
 
             &:first-child {
                 margin-left: 0;
@@ -1011,6 +1148,10 @@ section.breadcrumbs {
                 width: 100%;
                 font-size: 14px;
                 font-family: Roboto;
+
+                @media screen and (max-width: $w580) {
+                    height: rem(50);
+                }
             }
 
         }
@@ -1021,6 +1162,10 @@ section.breadcrumbs {
 
             @media screen and (max-width: $w760) {
                 border-width: 1px;
+            }
+
+            @media screen and (max-width: $w580) {
+                height: rem(50);
             }
         }
 
@@ -1035,7 +1180,7 @@ section.breadcrumbs {
 
 .article-content {
 
-    @include padd-x(50);
+    @include padd-top(50);
 
     &__table {
 

@@ -1,4 +1,5 @@
 import "%modules%/header/header";
+import "%modules%/mobile-menu-button/mobile-menu-button";
 // import "%modules%/video/video";
 // import "%modules%/menu/menu";
 // import "%modules%/popup-catalog/popup-catalog";

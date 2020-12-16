@@ -1,5 +1,6 @@
 .qna-item {
     padding: 15px;
+    background: $lightGray;
 
     &__head {
         display: flex;
@@ -17,8 +18,8 @@
         align-items: center;
 
         & .bgimage {
-            width: rem(32);
-            height: rem(32);
+            width: rem(35);
+            height: rem(35);
 
             @include bgimage-contain;
             margin-right: rem(10);

@@ -30,7 +30,12 @@ include ../../components/mobile-menu/mobile-menu
             li: a(href="#") Кузов
             li: a(href="#") Ходовая
             li: a(href="#") Электрика
-      .header__find: +icons('#ic_find', 18)
+      .header__find
+        +icons('#ic_find', 18)
+        .find-wrp
+          form(action="search"): input(type="text" placeholder="Найти")
+
+
       .header__quest
         button.btn.btn-line Задать вопрос
 

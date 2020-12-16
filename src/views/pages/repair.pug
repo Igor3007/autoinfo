@@ -4,6 +4,7 @@ include ../../blocks/components/select/select
 include ../../blocks/components/pagination/pagination
 include ../../blocks/components/form/form
 include ../../blocks/modules/repair-item/repair-item
+include ../../blocks/modules/mobile-menu-button/mobile-menu-button
 
 block variables
   include ../../data/questions
@@ -53,7 +54,8 @@ block content
                                   ul
                                     each parent2 in parent.parent 
                                       li: a(href="#")= parent2.title
-
+              .qna-filter__send
+                button.btn.btn-full Показать
           .page-qna__main
 
             .filter-repair
@@ -80,9 +82,10 @@ block content
 
 
             //- content
-
           .page-qna__pagination
             +pagination()
+          .page-qna__filter-button
+            +mobile-menu-button('Фильтр', '#ic_filter')
 
 
 

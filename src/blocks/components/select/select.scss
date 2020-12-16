@@ -76,7 +76,7 @@ ul[data-ul-select] {
     @media screen and (max-width: $w940) {
         display: flex;
         flex-direction: column;
-        padding-left: rem(20);
+
         background-color: #f4f4f4;
     }
 
@@ -87,8 +87,14 @@ ul[data-ul-select] {
                 display: block;
                 order: 1;
 
+                & a {
+                    border-bottom: 1px solid #ddd !important;
+                }
+
                 &.active {
                     order: 0;
+
+
 
                     &::after {
                         transform: rotate(180deg);
@@ -105,10 +111,27 @@ ul[data-ul-select] {
             display: none;
             width: 100%;
 
+            & a {
+                display: block;
+                height: rem(55);
+                line-height: rem(55);
+                border-bottom: 1px solid #ddd;
+                padding-left: rem(25);
+                margin: 0;
+
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+
 
             &.active {
                 display: block;
                 position: relative;
+
+                & a {
+                    border-bottom: none;
+                }
 
 
                 &::after {

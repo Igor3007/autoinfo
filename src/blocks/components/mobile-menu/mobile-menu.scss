@@ -1,10 +1,12 @@
 .mobile-menu {
 
+
+
     @media screen and (min-width: $w940) {
         display: none;
     }
 
-    background: #f5f5f5;
+    background: $yellow;
     position: fixed;
     left: 0;
     top: auto;
@@ -19,6 +21,7 @@
     &.open {
         display: flex;
         transform: translateX(0);
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.541);
     }
 
 
