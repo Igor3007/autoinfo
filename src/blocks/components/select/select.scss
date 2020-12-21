@@ -31,14 +31,14 @@
         background: transparent;
         border-radius: 5px;
         width: 100%;
-        color: #000;
-        font-size: 13px;
+        color: #939393;
+        font-size: rem(14);
         max-width: 230px;
         text-overflow: ellipsis;
 
         & option {
             font-family: 'arial';
-            font-size: 13px;
+            font-size: rem(14);
         }
 
         &::-ms-expand {

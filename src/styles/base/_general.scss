@@ -667,7 +667,7 @@ section.breadcrumbs {
         font-size: rem(28);
         line-height: rem(59);
         color: #16162D;
-        @include padd-bottom(65);
+        @include padd-bottom(78);
 
         @media screen and (max-width: $w1100) {
             padding-bottom: rem(10);
@@ -1035,6 +1035,16 @@ section.breadcrumbs {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    & span {
+        color: $gray;
+    }
+
+    & .select select option,
+    & .select select {
+        color: #000;
+
+    }
 
     @media screen and (max-width: $w580) {
         flex-direction: column;
