@@ -16,9 +16,8 @@ block content
     section.page-title 
       .container
         h1 Audi
-    section.select-oil-section
-      .container
-        .select-oil
+
+        .select-oil.select-oil--details
           .select-oil__desc Уникальный сервис по подбору моторных масел с конкретными параметрами для автомобилей большинства популярных марок, эксплуатируемых автовладельцами на территории России. 
           .select-oil__filter
             form(action="/")
@@ -28,12 +27,13 @@ block content
                   .form__subitem: +select(['Выберите модель', 'A6', 'A4', 'D3'])
                   .form__subitem: button.btn.btn-line.btn-full Подобрать
 
+
     +model-list({
       data: model,
       viewAll: false,
       count: false,
       title: 'Audi',
-      modify: 'brand-list--model'
+      modify: 'brand-list--model' 
     })
 
 

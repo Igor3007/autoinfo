@@ -12,4 +12,20 @@ $(document).ready(function() {
         collapsedIconClass: 'icon-cross',
         expandedIconClass: 'icon-cross open',
     });
+
+    $('[data-brandList="toggle"]').on('click', function(event){
+
+        event.preventDefault()
+
+        const elem = $('.popular-brands__items li');
+        
+        if (!elem.hasClass('visible')) {
+            $(this).text('Скрыть')
+            elem.addClass('visible')
+        } else {
+            $(this).text('Показать все марки')
+            elem.removeClass('visible')
+        }
+        
+    })
 });

@@ -30,13 +30,15 @@
 
                 &.active a {
                     color: $mgray;
+                    border: 2px solid transparent;
+                    background: #f4f4f4;
                 }
 
                 & a {
                     width: rem(40);
                     height: rem(40);
                     display: flex;
-                    border: 2px solid $gray;
+                    border: 2px solid #ccc;
                     align-items: center;
                     justify-content: center;
 

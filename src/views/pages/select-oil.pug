@@ -16,17 +16,17 @@ block content
     section.page-title 
       .container
         h1 Подбор масла
-    section.select-oil-section
-      .container
-        .select-oil
+
+        .select-oil.select-oil--details
           .select-oil__desc Уникальный сервис по подбору моторных масел с конкретными параметрами для автомобилей большинства популярных марок, эксплуатируемых автовладельцами на территории России. 
           .select-oil__filter
-            form(action="/")
+            form(action="/") 
               .form
                 .form__item
-                  .form__subitem: +select(['Выберите марку', 'Audi', 'BMW', 'VW'])
-                  .form__subitem: +select(['Выберите модель', 'Audi', 'BMW', 'VW'])
-                  .form__subitem: button.btn.btn-line.btn-full Подобрать
+                  .form__subitem: +select(['Audi', 'BMW', 'VW'])
+                  .form__subitem: +select(['Выберите модель', 'A6', 'A4', 'D3'])
+                  .form__subitem: button.btn.btn-line.btn-full Подобрать 
+
 
     +brand-list({
       data: brand,

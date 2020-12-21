@@ -450,6 +450,11 @@ header {
     }
 
 
+    &.top-video--oildetails {
+        background-color: $lightGray;
+        @include padd-x(60);
+
+    }
 
 }
 
@@ -1142,6 +1147,14 @@ section.breadcrumbs {
 
     max-width: rem(900);
 
+    &.select-oil--details {
+        padding-top: rem(30);
+
+        & .select-oil__desc {
+            padding-bottom: rem(35);
+        }
+    }
+
     &__desc {
         padding-bottom: rem(25);
     }
@@ -1190,9 +1203,19 @@ section.breadcrumbs {
 
 .article-content {
 
-    @include padd-top(50);
+    padding-top: rem(20);
+    @include padd-bottom(70);
 
     &__table {
+
+        & h2,
+        & h3,
+        & h4,
+        & h5 {
+            padding-bottom: rem(25) !important;
+        }
+
+        padding-bottom: rem(40);
 
         @media screen and (max-width: $w940) {
             overflow-y: auto;
@@ -1204,6 +1227,13 @@ section.breadcrumbs {
             width: 100%;
             min-width: 920px;
 
+            & th {
+                background-color: $lightGray;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+
             & th,
             & td {
                 border: 1px solid #e1e1e1;
@@ -1214,9 +1244,13 @@ section.breadcrumbs {
 
                 &.fs13 {
                     font-size: rem(13);
+                    font-weight: 400;
+                    color: #666;
+                    text-transform: capitalize;
 
                     & span {
-                        font-weight: 600;
+                        font-weight: 500;
+                        color: #000;
                     }
                 }
 
@@ -1229,13 +1263,22 @@ section.breadcrumbs {
     }
 
     &__header {
-        padding-top: rem(35);
+
+        @include padd-top(100);
+
+        &:first-child {
+            padding-top: rem(25);
+        }
+
+        & h2 {
+            font-size: rem(28);
+        }
     }
 
     &__col2,
     &__text,
     &__table {
-        padding-top: rem(25);
+        padding-top: rem(15);
     }
 
     h1,
@@ -1244,7 +1287,7 @@ section.breadcrumbs {
     h4,
     h5,
     h6 {
-        padding-bottom: rem(15);
+        padding-bottom: rem(0);
     }
 
     & .anotation {
@@ -1258,6 +1301,12 @@ section.breadcrumbs {
         display: flex;
         margin: 0 rem(-15);
 
+        & p {
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
 
         &>div {
             flex-grow: 1;
@@ -1268,5 +1317,9 @@ section.breadcrumbs {
         @media screen and (max-width: $w940) {
             flex-direction: column;
         }
+    }
+
+    & img {
+        padding-top: rem(25);
     }
 }
