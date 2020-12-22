@@ -324,7 +324,7 @@ header {
         @include row-flex();
         justify-content: space-between;
 
-        @include to($w580) {
+        @include to($w760) {
             flex-direction: column-reverse;
         }
     }
@@ -340,7 +340,7 @@ header {
         @include size-w760(5.8);
         @include size-w580(12);
 
-        @include to($w580) {
+        @include to($w760) {
             margin-bottom: rem(30);
         }
     }
@@ -503,7 +503,7 @@ header {
         @include row-flex();
         margin-left: rem(20);
 
-        @media screen and (max-width: $w760) {
+        @media screen and (max-width: $w940) {
             flex-wrap: nowrap;
             overflow-y: auto;
             max-width: calc(100% + rem(30));
@@ -832,7 +832,7 @@ section.breadcrumbs {
 
     &__title {
         background-color: #fff;
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #e1e1e1;
         height: rem(50);
         display: flex;
         align-items: center;
