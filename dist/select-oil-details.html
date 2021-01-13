@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.css?v=1.52">
+  </head>
+  <body>
+    <header>
+      <div class="container-1720">
+        <div class="header">
+          <div class="header__top">
+            <div class="header__top-info">База данных по ремонту и обслуживанию автомобилей</div>
+            <div class="header__top-nav">
+              <nav>
+                <ul>
+                  <li><a href="/repair.html">Все материалы</a></li>
+                  <li><a href="/brands.html">Автомобили </a></li>
+                  <li><a href="/qna.html">Вопрос-ответ</a></li>
+                  <li><a href="/select-oil.html">Подбор масла</a></li>
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Личный кабинет</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="header__main">
+            <div class="header__mobile">
+              <div class="nav__hamburger"><i></i><i></i><i></i></div>
+            </div>
+            <div class="header__logo"><a href="/"><img src="/img/svg/logo.svg"></a></div>
+            <div class="header__nav">
+              <nav>
+                <ul>
+                  <li><a href="#">Расходники ТО</a></li>
+                  <li><a href="#">Двигатель</a></li>
+                  <li><a href="#">Коробка передач</a></li>
+                  <li><a href="#">Кузов</a></li>
+                  <li><a href="#">Ходовая</a></li>
+                  <li><a href="#">Электрика</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__profile"><a href="#">
+                <svg width="18" height="18">
+                  <use xlink:href="/img/sprites/sprite.svg#ic_user"></use>
+                </svg></a></div>
+            <div class="header__find">
+              <svg width="18" height="18">
+                <use xlink:href="/img/sprites/sprite.svg#ic_find"></use>
+              </svg>
+              <div class="find-wrp">
+                <form action="search">
+                  <input type="text" placeholder="Найти">
+                </form>
+              </div>
+            </div>
+            <div class="header__quest">
+              <button class="btn btn-line">Задать вопрос</button>
+            </div>
+          </div>
+        </div>
+              <div class="mobile-menu">
+                <div class="mobile-menu__top">
+                  <ul>
+                    <li><a href="/repair.html">Все материалы</a></li>
+                    <li><a href="/brands.html">Автомобили </a></li>
+                    <li><a href="/qna.html">Вопрос-ответ</a></li>
+                    <li><a href="/select-oil.html">Подбор масла</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Личный кабинет</a></li>
+                  </ul>
+                </div>
+                <div class="mobile-menu__main">
+                  <ul>
+                    <li><a href="#">Расходники ТО</a></li>
+                    <li><a href="#">Двигатель</a></li>
+                    <li><a href="#">Коробка передач</a></li>
+                    <li><a href="#">Кузов</a></li>
+                    <li><a href="#">Ходовая</a></li>
+                    <li><a href="#">Электрика</a></li>
+                  </ul>
+                </div>
+                <div class="mobile-menu__sep"></div>
+                <div class="mobile-menu__footer">
+                  <div class="mobile-menu__footer-call">
+                    <button class="btn btn-line">Заказать звонок</button>
+                  </div>
+                </div>
+              </div>
+      </div>
+    </header>
+    <main>
+      <div class="main">
+        <section class="breadcrumbs">
+          <div class="container">
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="#">Подбор масла</a></li>
+                <li><a href="#">Audi 100 4l 2005-2009</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="page-title"> 
+          <div class="container">
+            <h1>Подбор масла</h1>
+            <div class="select-oil select-oil--details">
+              <div class="select-oil__desc">Уникальный сервис по подбору моторных масел с конкретными параметрами для автомобилей большинства популярных марок, эксплуатируемых автовладельцами на территории России. </div>
+              <div class="select-oil__filter">
+                <form action="/">
+                  <div class="form">
+                    <div class="form__item">
+                      <div class="form__subitem">
+                        <div class="select">
+                          <select>
+                            <option>Audi</option>
+                            <option>BMW</option>
+                            <option>VW</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form__subitem">
+                        <div class="select">
+                          <select>
+                            <option>Выберите модель</option>
+                            <option>A6</option>
+                            <option>A4</option>
+                            <option>D3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form__subitem">
+                        <button class="btn btn-line btn-full">Подобрать</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="article-content">
+          <div class="container">
+            <article>
+              <div class="article-content__header">
+                <h2>Масло для Audi 100 4l 2005-2009</h2>
+              </div>
+              <div class="article-content__text">
+                <p>В таблице указаны подходящие масла для заливки в двигатель Q7 4l, выпускавшийся с 2005 по 2009 год.</p>
+              </div>
+              <div class="article-content__table">
+                <h4>Модификация двигателя 2.0 литра 16v F4R - 143 л.с. / 195 Нм</h4><table >
+<colgroup>
+<col style="width: 142px">
+<col style="width: 144px">
+<col style="width: 140px">
+<col style="width: 138px">
+<col style="width: 151px">
+<col style="width: 154px">
+<col style="width: 100px">
+<col style="width: 177px">
+</colgroup>
+<thead>
+<tr>
+<th rowspan="2">Год</th>
+<th colspan="3">Вязкость SAE</th>
+<th rowspan="2">Бензин API</th>
+<th rowspan="2">Дизель API</th>
+<th rowspan="2">Тип</th>
+<th rowspan="2">Рекомендуемые<br>производители</th>
+</tr>
+<tr>
+<th class="fs13" ><span> Всесезон</span><br>от +25 до -25 °C</th>
+<th class="fs13" ><span>Зима</span><br>от -35 до +5 °C</th>
+<th class="fs13" ><span>Лето</span><br>от -5 до +45 °C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2005</td>
+<td>10W-40<br>5W-40</td>
+<td>5W-40<br>0W-30</td>
+<td>20W-40<br>25W-30<br>25W-40</td>
+<td>SH</td>
+<td>CH-4</td>
+<td>полусинтетика, минералка</td>
+<td>Mobil, ZIC, Лукойл, Valvoline, Роснефть, Select</td>
+</tr>
+<tr>
+<td>2006</td>
+<td>15W-40<br>10W-40<br>5W-40</td>
+<td>0W-30<br>5W-40<br>5W-30</td>
+<td>20W-30<br>20W-40<br>25W-30</td>
+<td>SJ</td>
+<td>CH-4</td>
+<td>полусинтетика, минералка</td>
+<td>Mobil, Лукойл, Valvoline, Роснефть, CONSOL</td>
+</tr>
+<tr>
+<td>2007</td>
+<td>15W-40<br>10W-40<br>5W-40</td>
+<td>0W-30<br>5W-40<br>5W-30</td>
+<td>20W-30<br>20W-40<br>25W-30</td>
+<td>SJ</td>
+<td>CH-4</td>
+<td>полусинтетика, минералка</td>
+<td>Mobil, Лукойл, Valvoline, Роснефть, CONSOL</td>
+</tr>
+</tbody>
+</table>
+              </div>
+              <div class="article-content__col2">
+                <div>
+                  <p>Для покупки подходящего масла потребуется назвать — индекс вязкости SAE и допустимый — API качества масла для дизельного или бензинового двигателя. (Выбор производителя на свое усмотрение).</p>
+                  <p>С годами двигатель Q7 стареет (устает), поэтому параметры таблицы актуальны для замены масла в 2020 году и со временем могут изменяться с учетом возраста автомобиля.</p>
+                  <p>Если автомобиль эксплуатируется круглый год в регионе с преобладанием холодного сезона, то подходящий класс вязкости масла необходимо брать из колонок зима или всесезон.</p>
+                  <p class="anotation">
+                     НАПРИМЕР: <br> Для бензинового двигателя <strong>Audi Q7 (4l) 2005 г.в. </strong>при эксплуатации <strong>в 2020 году, </strong>подойдет всесезонное полусинтетическое масло <strong>10W-40 с качеством SH, </strong>а для моделей <strong>2009 г.в. </strong>на холодный период года хорошо подойдет — полусинтетика <strong>0W-40 \ SL.</strong></p>
+                  <p>Если автомобиль эксплуатируется круглый год в регионе с преобладанием теплого сезона, то подходящий класс вязкости масла необходимо брать из колонки всесезон. Если автомобиль эксплуатируется редко в течении года и преимущественно в теплое время года, то подходящий класс вязкости масла необходимо брать из колонки лето.</p>
+                  <p>По возможности, сверьте выбранное масло на соответствие требованиям спецификаций производителя автомобиля и интервалы техобслуживания.</p>
+                </div>
+                <div><img src="/img/other/oil.jpg"></div>
+              </div>
+              <div class="article-content__header">
+                <h2>Состояние масла по капле</h2>
+              </div>
+              <div class="article-content__text">
+                <p>Одну каплю с масляного щупа двигателя, необходимо капнуть на лист бумаги и подождать 15 минут, пока она пропитается и сформирует <br> четкое пятно. Теперь сравниваем полученный образец с таблицей.</p><img src="/img/other/test-oil.jpg">
+              </div>
+            </article>
+          </div>
+        </section>
+        <section class="top-video top-video--oildetails">
+          <div class="container">
+            <div class="section-title">
+              <div class="section-h2">Видео</div><a href="#">все видеоматериалы</a>
+            </div>
+            <div class="top-video__list">
+              <div class="top-video__item">
+                <div class="video-item">
+                  <div class="video-item__preview">
+                    <div class="video-item__img"><span class="bgimage" style="background-image: url(/img/video/v1.png)"></span>
+                    </div>
+                    <div class="video-item__play"><a href="https://www.youtube.com/watch?v=7LJIcrJKDI0" data-fancybox="iframe">
+                        <svg width="25" height="25">
+                          <use xlink:href="/img/sprites/sprite.svg#ic_play"></use>
+                        </svg></a></div>
+                  </div>
+                  <div class="video-item__title"><a href="#">Какое масло выбрать для enault Logan?</a></div>
+                  <div class="video-item__tags">
+                    <ul class="box-tags">
+                      <li><a href="#">Двигатель</a></li>
+                      <li><a href="#">Двигатель</a></li>
+                      <li><a href="#">масло</a></li>
+                      <li><a href="#">Renault</a></li>
+                      <li><a href="#">logan</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="top-video__item">
+                <div class="video-item">
+                  <div class="video-item__preview">
+                    <div class="video-item__img"><span class="bgimage" style="background-image: url(/img/video/v2.png)"></span>
+                    </div>
+                    <div class="video-item__play"><a href="https://www.youtube.com/watch?v=7LJIcrJKDI0" data-fancybox="iframe">
+                        <svg width="25" height="25">
+                          <use xlink:href="/img/sprites/sprite.svg#ic_play"></use>
+                        </svg></a></div>
+                  </div>
+                  <div class="video-item__title"><a href="#">Что такое вязкость масла?</a></div>
+                  <div class="video-item__tags">
+                    <ul class="box-tags">
+                      <li><a href="#">Двигатель </a></li>
+                      <li><a href="#">масло</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="top-video__item">
+                <div class="video-item">
+                  <div class="video-item__preview">
+                    <div class="video-item__img"><span class="bgimage" style="background-image: url(/img/video/v3.png)"></span>
+                    </div>
+                    <div class="video-item__play"><a href="https://www.youtube.com/watch?v=7LJIcrJKDI0" data-fancybox="iframe">
+                        <svg width="25" height="25">
+                          <use xlink:href="/img/sprites/sprite.svg#ic_play"></use>
+                        </svg></a></div>
+                  </div>
+                  <div class="video-item__title"><a href="#">Как выбрать моторное масло? Ликбез для начинающих</a></div>
+                  <div class="video-item__tags">
+                    <ul class="box-tags">
+                      <li><a href="#">Renault</a></li>
+                      <li><a href="#">logan</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="top-qna">
+          <div class="container">
+            <div class="section-title">
+              <div class="section-h2">Вопросы и ответы</div>
+            </div>
+            <div class="top-qna__list">
+              <div class="top-qna__item">
+                <div class="qna-item">
+                  <div class="qna-item__head">
+                    <div class="qna-item__auto"><span class="bgimage" style="background-image: url(/img/autoBrand/mazda.png)"></span><span>Mazda 6</span>
+                    </div>
+                    <div class="qna-item__exist"><span class="answer-exist">Есть ответ</span>
+                    </div>
+                  </div>
+                  <div class="qna-item__main"><a href="#">Какое масло выбрать для Mazda 6?</a></div>
+                  <div class="qna-item__tags">
+                    <ul class="box-tags">
+                      <li><a href="#">Двигатель</a></li>
+                      <li><a href="#">Масло</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="top-qna__item">
+                <div class="qna-item">
+                  <div class="qna-item__head">
+                    <div class="qna-item__auto"><span class="bgimage" style="background-image: url(/img/autoBrand/honda.png)"></span><span>HOnda civic</span>
+                    </div>
+                    <div class="qna-item__exist"><span class="answer-exist">Есть ответ</span>
+                    </div>
+                  </div>
+                  <div class="qna-item__main"><a href="#">Какие колодки купить на Хонду Цивик?</a></div>
+                  <div class="qna-item__tags">
+                    <ul class="box-tags">
+                      <li><a href="#">ходовая</a></li>
+                      <li><a href="#">тормозная система</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="top-qna__item">
+                <div class="qna-item">
+                  <div class="qna-item__head">
+                    <div class="qna-item__auto"><span class="bgimage" style="background-image: url(/img/autoBrand/lada.png)"></span><span>lada vesta</span>
+                    </div>
+                    <div class="qna-item__exist"><span class="answer-noexist">Без ответа</span>
+                    </div>
+                  </div>
+                  <div class="qna-item__main"><a href="#">Нужно ли прокачивать тормоза?</a></div>
+                  <div class="qna-item__tags">
+                    <ul class="box-tags">
+                      <li><a href="#">ходовая</a></li>
+                      <li><a href="#">тормозная система</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="top-qna__item">
+                <div class="qna-item">
+                  <div class="qna-item__head">
+                    <div class="qna-item__auto"><span class="bgimage" style="background-image: url(/img/autoBrand/lada.png)"></span><span>lada vesta</span>
+                    </div>
+                    <div class="qna-item__exist"><span class="answer-exist">Есть ответ</span>
+                    </div>
+                  </div>
+                  <div class="qna-item__main"><a href="#">Какое масло выбрать для Lada 6?</a></div>
+                  <div class="qna-item__tags">
+                    <ul class="box-tags">
+                      <li><a href="#">Двигатель</a></li>
+                      <li><a href="#">Масло</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="top-qna__item">
+                <div class="qna-item">
+                  <div class="qna-item__head">
+                    <div class="qna-item__auto"><span class="bgimage" style="background-image: url(/img/autoBrand/mazda.png)"></span><span>Mazda 6</span>
+                    </div>
+                    <div class="qna-item__exist"><span class="answer-exist">Есть ответ</span>
+                    </div>
+                  </div>
+                  <div class="qna-item__main"><a href="#">Какое масло выбрать для Mazda 6?</a></div>
+                  <div class="qna-item__tags">
+                    <ul class="box-tags">
+                      <li><a href="#">ходовая</a></li>
+                      <li><a href="#">тормозная система</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="top-qna__item">
+                <div class="qna-item">
+                  <div class="qna-item__head">
+                    <div class="qna-item__auto"><span class="bgimage" style="background-image: url(/img/autoBrand/honda.png)"></span><span>HOnda civic</span>
+                    </div>
+                    <div class="qna-item__exist"><span class="answer-exist">Есть ответ</span>
+                    </div>
+                  </div>
+                  <div class="qna-item__main"><a href="#">Какие колодки купить на Хонду Цивик?</a></div>
+                  <div class="qna-item__tags">
+                    <ul class="box-tags">
+                      <li><a href="#">ходовая</a></li>
+                      <li><a href="#">тормозная система</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="container-1720">
+          <div class="footer__top">
+            <div class="container">
+              <div class="footer__logo"><a href="#"><img src="/img/svg/logo.svg"></a></div>
+              <div class="footer__nav">
+                <ul>
+                  <li><a href="#">Все материалы</a></li>
+                  <li><a href="#">Автомобили</a></li>
+                  <li><a href="#">Вопрос-ответ</a></li>
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Подбор масла</a></li>
+                </ul>
+              </div>
+              <div class="footer__quest">
+                <button class="btn btn-line">Задать вопрос</button>
+              </div>
+            </div>
+          </div>
+          <div class="footer__auto">
+            <div class="container">
+              <div class="footer-auto">
+                <div class="footer-auto__item">
+                  <div class="footer-auto__title">audi</div>
+                  <div class="footer-auto__list">
+                    <ul>
+                      <li><a href="#">80</a></li>
+                      <li><a href="#">100</a></li>
+                      <li><a href="#">A4</a></li>
+                      <li><a href="#">F6</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-auto__item">
+                  <div class="footer-auto__title">ВАЗ</div>
+                  <div class="footer-auto__list">
+                    <ul>
+                      <li><a href="#">2106</a></li>
+                      <li><a href="#">2107</a></li>
+                      <li><a href="#">2109</a></li>
+                      <li><a href="#">2110</a></li>
+                      <li><a href="#">2114</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-auto__item">
+                  <div class="footer-auto__title">KIA</div>
+                  <div class="footer-auto__list">
+                    <ul>
+                      <li><a href="#">Rio</a></li>
+                      <li><a href="#">Sportedge</a></li>
+                      <li><a href="#">Sorento</a></li>
+                      <li><a href="#">Sid</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-auto__item">
+                  <div class="footer-auto__title">Volkswagen</div>
+                  <div class="footer-auto__list">
+                    <ul>
+                      <li><a href="#">Passat</a></li>
+                      <li><a href="#">Polo</a></li>
+                      <li><a href="#">Golf</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-auto__item">
+                  <div class="footer-auto__title">audi</div>
+                  <div class="footer-auto__list">
+                    <ul>
+                      <li><a href="#">80</a></li>
+                      <li><a href="#">100</a></li>
+                      <li><a href="#">A4</a></li>
+                      <li><a href="#">F6</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-auto__item">
+                  <div class="footer-auto__title">ВАЗ</div>
+                  <div class="footer-auto__list">
+                    <ul>
+                      <li><a href="#">2106</a></li>
+                      <li><a href="#">2107</a></li>
+                      <li><a href="#">2109</a></li>
+                      <li><a href="#">2110</a></li>
+                      <li><a href="#">2114</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-auto__item">
+                  <div class="footer-auto__title">KIA</div>
+                  <div class="footer-auto__list">
+                    <ul>
+                      <li><a href="#">Rio</a></li>
+                      <li><a href="#">Sportedge</a></li>
+                      <li><a href="#">Sorento</a></li>
+                      <li><a href="#">Sid</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-auto__item">
+                  <div class="footer-auto__title">audi</div>
+                  <div class="footer-auto__list">
+                    <ul>
+                      <li><a href="#">80</a></li>
+                      <li><a href="#">100</a></li>
+                      <li><a href="#">A4</a></li>
+                      <li><a href="#">F6</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer-auto__item">
+                  <div class="footer-auto__title">ВАЗ</div>
+                  <div class="footer-auto__list">
+                    <ul>
+                      <li><a href="#">2106</a></li>
+                      <li><a href="#">2107</a></li>
+                      <li><a href="#">2109</a></li>
+                      <li><a href="#">2110</a></li>
+                      <li><a href="#">2114</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__dev"><a href="https://promicom.ru" target="_blank"> <span>Digital-агентство</span><img src="/img/svg/logodev.svg"></a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js?v=1.52"></script>
+    <script src="js/vendor.js"></script>
+  </body>
+</html>
